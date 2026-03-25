@@ -15,6 +15,5 @@ Rules:
 - Invalid prices (non-numeric) and `minPrice > maxPrice` show an error state.
 - If filters yield 0 matches, it shows **“No results found”**.
 
-## Performance improvement (for large datasets)
-Precompute and index data once: store `nameLower` and `categoryLower` fields on each record and build a `category -> records[]` map. Then each search avoids repeated `toLowerCase()` and reduces scanning to only relevant categories.
+
 
